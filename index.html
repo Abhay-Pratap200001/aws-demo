@@ -1,63 +1,514 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My S3 Website</title>
+```
+<title>AWS Cloud Learning | S3 Website</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
+
 <body>
 
-    <header>
-        <h1>My S3 Website</h1>
-        <p>Hosted using AWS S3</p>
-    </header>
+```
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container nav-content">
+        <div class="logo">
+            ☁️ CloudLearn
+        </div>
 
-    <main>
-        <section class="hero">
-            <h2>Welcome to My Website 🚀</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">AWS Services</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#deployment">Deployment</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-button">Get Started</a>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🚀 AWS Cloud Learning Project
+        </div>
+
+        <h1>
+            Learn Cloud.<br>
+            <span>Build. Deploy. Scale.</span>
+        </h1>
+
+        <p>
+            A simple static website hosted on Amazon S3.
+            This project demonstrates how HTML and CSS websites
+            can be deployed using AWS cloud infrastructure.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="primary-btn">
+                Explore AWS
+            </a>
+
+            <a href="#deployment" class="secondary-btn">
+                How It Works →
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="terminal-header">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="terminal">
+            <p><span class="green">$</span> aws s3 ls</p>
+            <p class="output">my-cloud-learning-bucket</p>
+
+            <p><span class="green">$</span> aws s3 sync . s3://my-bucket</p>
+            <p class="success">✓ Upload successful</p>
+
+            <p><span class="green">$</span> status</p>
+            <p class="success">✓ Website is live 🚀</p>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- About Section -->
+<section class="about section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>ABOUT THE PROJECT</span>
+            <h2>My AWS Cloud Journey</h2>
             <p>
-                This is a simple static website deployed on
-                Amazon S3.
+                This website is part of my hands-on cloud learning journey.
+                I'm learning how modern applications are deployed,
+                stored and managed using AWS services.
             </p>
+        </div>
 
-            <button>Learn More</button>
-        </section>
+        <div class="stats">
 
-        <section class="cards">
+            <div class="stat">
+                <h3>10+</h3>
+                <p>AWS Concepts</p>
+            </div>
 
-            <div class="card">
+            <div class="stat">
+                <h3>3+</h3>
+                <p>Cloud Projects</p>
+            </div>
+
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Hands-on Learning</p>
+            </div>
+
+            <div class="stat">
+                <h3>∞</h3>
+                <p>Learning Potential</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AWS Services -->
+<section class="services section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>AWS SERVICES</span>
+            <h2>What I'm Learning</h2>
+            <p>
+                Exploring the core AWS services commonly used
+                in cloud and DevOps environments.
+            </p>
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🪣</div>
                 <h3>Amazon S3</h3>
                 <p>
-                    S3 is an object storage service used to store
-                    files, images, videos and websites.
+                    Object storage service used for storing files,
+                    images, backups and static websites.
                 </p>
+                <span class="tag">Storage</span>
             </div>
 
-            <div class="card">
-                <h3>Static Website</h3>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Amazon EC2</h3>
                 <p>
-                    HTML, CSS and JavaScript files can be hosted
-                    using S3.
+                    Provides scalable virtual servers that can
+                    run applications in the AWS cloud.
                 </p>
+                <span class="tag">Compute</span>
             </div>
 
-            <div class="card">
-                <h3>Cloud Learning</h3>
+
+            <div class="service-card">
+                <div class="service-icon">🔐</div>
+                <h3>AWS IAM</h3>
                 <p>
-                    I'm learning AWS and cloud technologies
-                    through hands-on practice.
+                    Controls access to AWS resources using users,
+                    roles, policies and permissions.
+                </p>
+                <span class="tag">Security</span>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🗄️</div>
+                <h3>Amazon RDS</h3>
+                <p>
+                    Managed relational database service supporting
+                    engines such as MySQL and PostgreSQL.
+                </p>
+                <span class="tag">Database</span>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>AWS Lambda</h3>
+                <p>
+                    Serverless compute service that runs code
+                    without managing servers.
+                </p>
+                <span class="tag">Serverless</span>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Amazon VPC</h3>
+                <p>
+                    Provides an isolated virtual network where
+                    AWS resources can securely communicate.
+                </p>
+                <span class="tag">Networking</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Learning Roadmap -->
+<section class="learning section" id="learning">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>LEARNING ROADMAP</span>
+            <h2>My Cloud Learning Path</h2>
+            <p>
+                A practical path from cloud fundamentals
+                to containerization and deployment.
+            </p>
+        </div>
+
+
+        <div class="roadmap">
+
+            <div class="roadmap-item">
+                <div class="number">01</div>
+
+                <div>
+                    <h3>Linux Fundamentals</h3>
+                    <p>
+                        Learn files, directories, permissions,
+                        processes, networking and common commands.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item">
+                <div class="number">02</div>
+
+                <div>
+                    <h3>AWS Fundamentals</h3>
+                    <p>
+                        Understand IAM, EC2, S3, EBS, AMI,
+                        VPC, RDS and other core services.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item">
+                <div class="number">03</div>
+
+                <div>
+                    <h3>Docker</h3>
+                    <p>
+                        Learn containers, Docker images,
+                        Dockerfiles, volumes and networks.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item">
+                <div class="number">04</div>
+
+                <div>
+                    <h3>Kubernetes</h3>
+                    <p>
+                        Understand containers orchestration,
+                        pods, deployments, services and clusters.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="roadmap-item">
+                <div class="number">05</div>
+
+                <div>
+                    <h3>CI/CD & DevOps</h3>
+                    <p>
+                        Automate application testing, building
+                        and deployment using modern DevOps tools.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- S3 Deployment -->
+<section class="deployment section" id="deployment">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>S3 DEPLOYMENT</span>
+            <h2>How This Website Works</h2>
+            <p>
+                This website uses Amazon S3 to host static
+                HTML and CSS files.
+            </p>
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Create S3 Bucket</h3>
+                <p>
+                    Create an S3 bucket with a unique bucket name
+                    in your AWS account.
                 </p>
             </div>
 
-        </section>
-    </main>
 
-    <footer>
-        <p>© 2026 My S3 Website | AWS Learning Project</p>
-    </footer>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Upload Files</h3>
+                <p>
+                    Upload index.html and style.css
+                    into the S3 bucket.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Configure Website</h3>
+                <p>
+                    Enable static website hosting and configure
+                    the index document.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Access Website</h3>
+                <p>
+                    Use the S3 website endpoint to access
+                    the deployed static website.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Why Cloud -->
+<section class="why-cloud section">
+
+    <div class="container">
+
+        <div class="why-content">
+
+            <div>
+                <span class="small-title">WHY CLOUD?</span>
+
+                <h2>
+                    Build applications that
+                    can grow with your users.
+                </h2>
+
+                <p>
+                    Cloud platforms provide developers with
+                    flexible infrastructure, scalable services
+                    and powerful tools for deploying modern
+                    applications.
+                </p>
+
+                <p>
+                    By learning AWS, Linux, Docker and Kubernetes,
+                    developers can understand not only how to
+                    write applications but also how applications
+                    run in production.
+                </p>
+
+            </div>
+
+
+            <div class="benefits">
+
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>Scalable</h3>
+                        <p>Resources can grow according to demand.</p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>Flexible</h3>
+                        <p>Deploy applications across different environments.</p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>Reliable</h3>
+                        <p>Build applications using highly available infrastructure.</p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>Cost Efficient</h3>
+                        <p>Pay for the cloud resources you actually use.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <span>START YOUR CLOUD JOURNEY</span>
+
+            <h2>
+                Learn today. Build tomorrow.
+            </h2>
+
+            <p>
+                Keep learning, keep building and keep deploying.
+                Every project is another step toward becoming
+                a better cloud engineer.
+            </p>
+
+            <a href="#home" class="primary-btn">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+            <h3>☁️ CloudLearn</h3>
+            <p>
+                A personal AWS cloud learning project.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">AWS Services</a>
+            <a href="#learning">Learning</a>
+            <a href="#deployment">Deployment</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>
+            © 2026 CloudLearn | Built for AWS Learning 🚀
+        </p>
+    </div>
+
+</footer>
+```
 
 </body>
 </html>
